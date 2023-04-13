@@ -6,8 +6,8 @@ tap_install:
       image_registry:
         project_path: "index.docker.io/ykhadilkar"
         secret:
-          name: "KP-DEFAULT-REPO-SECRET"
-          namespace: "KP-DEFAULT-REPO-SECRET-NAMESPACE"
+          name: "ykhadilkar"
+          namespace: "default"
       kubernetes_distribution: ""
 
       kubernetes_version: "1.24.9" # Required regardless of distribution when Kubernetes version is 1.25 or later.
@@ -67,7 +67,7 @@ tap_install:
 
     grype:
       namespace: "default"
-      targetImagePullSecret: "tap-registry"
+      # targetImagePullSecret: "tap-registry"
       # In a single cluster, the connection between the scanning pod and the metadata store happens inside the cluster and does not pass through ingress. This is automatically configured, you do not need to provide an ingress connection to the store.
 
     policy:
