@@ -5,9 +5,6 @@ tap_install:
       ingress_domain: "tap-gitops.lab.khadilkar.net"
       image_registry:
         project_path: "index.docker.io/ykhadilkar"
-        secret:
-          name: "ykhadilkar"
-          namespace: "default"
       kubernetes_distribution: ""
 
       kubernetes_version: "1.24.9" # Required regardless of distribution when Kubernetes version is 1.25 or later.
