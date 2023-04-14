@@ -69,3 +69,11 @@ tap_install:
 
     policy:
       tuf_enabled: false # By default, TUF initialization and keyless verification are deactivated.
+    
+    namespace_provisioner:
+      controller: false
+      gitops_install:
+        ref: origin/main
+        subPath: ns-provisioner/gitops-install
+        url: https://github.com/ykhadilkar/tap-gitops.git
+
